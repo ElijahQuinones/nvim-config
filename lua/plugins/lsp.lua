@@ -18,13 +18,13 @@ return {
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
     end
 
-    local lspconfig = require("lspconfig")
     local cmp_lsp = require("cmp_nvim_lsp")
     local capabilities = cmp_lsp.default_capabilities()
 
-    lspconfig.gopls.setup({
+    vim.lsp.config.gopls = {
       capabilities = capabilities,
-    })
+    }
+    vim.lsp.enable("gopls")
 
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
     vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
