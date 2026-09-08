@@ -1,6 +1,6 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  build = ":TSUpadte",
+  build = ":TSUpdate",
   version = false,
   	opts = {
   		ensure_installed = { "go", "lua", "vim", "javascript", "html" },
